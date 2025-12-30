@@ -65,7 +65,6 @@ const Dashboard = () => {
 
   return (
     <div className="flex flex-col h-screen w-screen bg-gray-100 overflow-hidden">
-      {/* Header full espacio en x */}
       <header className="bg-blue-950 text-white shadow-md z-50 ">
         <div className="flex items-center justify-between px-4 py-3 md:px-6 md:py-3">
           <div className="flex items-center gap-4">
@@ -102,7 +101,6 @@ const Dashboard = () => {
           />
         )}
 
-        {/* Sidebar o menu lateral */}
         <aside
           className={`
             absolute md:static inset-y-0 left-0 z-40
@@ -112,7 +110,6 @@ const Dashboard = () => {
             md:translate-x-0 flex flex-col h-full
           `}
         >
-          {/* Navegacion */}
           <nav className="flex-1 space-y-7">
             <div className="relative w-full">
               <img
@@ -164,7 +161,6 @@ const Dashboard = () => {
             </div>
           </nav>
 
-          {/*  Footer del menu lateral*/}
           <div className="p-4 border-t border-gray-100">
             <button
               onClick={handleLogout}
@@ -176,7 +172,6 @@ const Dashboard = () => {
           </div>
         </aside>
 
-        {/* Contenido principal */}
         <main className="flex-1 overflow-auto bg-gray-50 p-4 md:p-8 w-full relative">
           <div className="max-w-7xl mx-auto space-y-6">
             <h1 className="text-4xl font-bold text-blue-950">CATEGORIAS</h1>

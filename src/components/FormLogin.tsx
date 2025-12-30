@@ -7,7 +7,6 @@ import { authService } from "../services/authService";
 import logoBe from "../assets/images/LogoBe.webp";
 import { Mail, Lock, Loader2 } from "lucide-react";
 
-// Esquema de validación con Zod
 const loginSchema = z.object({
   email: z
     .string()
@@ -43,7 +42,6 @@ const FormLogin = () => {
 
   return (
     <div className="w-[700px] p-18 bg-white backdrop-blur-sm rounded-2xl ">
-      {/* Header */}
       <div className="text-center mb-6 sm:mb-8">
         <img
           src={logoBe}
@@ -55,9 +53,7 @@ const FormLogin = () => {
         </p>
       </div>
 
-      {/* Formulario de login */}
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-        {/* Email Input */}
         <div className="space-y-2">
           <label
             htmlFor="email"
@@ -91,7 +87,6 @@ const FormLogin = () => {
           )}
         </div>
 
-        {/* Contraseña Input */}
         <div className="space-y-2">
           <label
             htmlFor="password"
@@ -133,7 +128,6 @@ const FormLogin = () => {
           </a>
         </div>
 
-        {/* Mensaje de error general (API) */}
         {authError && (
           <div className="bg-red-500/20 border border-red-500/50 rounded-xl p-3 sm:p-4">
             <p className="text-red-500 text-sm sm:text-base text-center">
@@ -142,7 +136,6 @@ const FormLogin = () => {
           </div>
         )}
 
-        {/* Boton de submit */}
         <button
           type="submit"
           disabled={isSubmitting}
